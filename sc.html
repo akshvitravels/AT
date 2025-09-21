@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akshvi Travels - Srisailam Packages</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f9f9f9;
+        color: #333;
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+      }
+      .back-home {
+        display: inline-block;
+        margin: 20px 0;
+        padding: 10px 20px;
+        background: #0077b6;
+        color: white;
+        border-radius: 12px;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+      .back-home:hover {
+        background: #005f99;
+      }
+
+      header {
+        background: linear-gradient(135deg, #0077b6, #0096c7);
+        color: white;
+        padding: 40px 20px;
+        margin-bottom: 30px;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 36px;
+        letter-spacing: 1px;
+      }
+
+      .description {
+        max-width: 900px;
+        margin: 0 auto 40px auto;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #023e8a;
+        text-align: center;
+      }
+
+      .trip-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 20px;
+        max-width: 1100px;
+        margin: auto;
+      }
+      .trip-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+      }
+      .trip-card img {
+        width: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+        height: 200px;
+        margin-bottom: 15px;
+      }
+      .trip-card h3 {
+        font-size: 22px;
+        color: #023e8a;
+        margin-bottom: 10px;
+      }
+      .trip-card ul {
+        padding-left: 20px;
+        margin-bottom: 15px;
+        color: #555;
+        line-height: 1.6;
+      }
+      .trip-card button {
+        margin: 8px 5px 0 0;
+        padding: 12px 20px;
+        border-radius: 10px;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .call-btn {
+        background: #dabb5f;
+        color: white;
+      }
+      .call-btn:hover {
+        background: #de6a4d;
+      }
+      .book-btn {
+        background: #51b59c;
+        color: white;
+      }
+      .book-btn:hover {
+        background: #007f6b;
+      }
+
+      .inclusions {
+        max-width: 1000px;
+        margin: 50px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: left;
+      }
+      .inclusions h2 {
+        text-align: center;
+        color: #023e8a;
+        margin-bottom: 20px;
+      }
+      .inclusions table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .inclusions th,
+      .inclusions td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+      }
+      .inclusions th {
+        background: #0077b6;
+        color: white;
+      }
+      .inclusions td {
+        background: #f9f9f9;
+      }
+
+      .vehicles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        max-width: 1100px;
+        margin: 40px auto;
+      }
+      .card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+      }
+      .card img {
+        width: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+        height: 180px;
+        margin-bottom: 15px;
+      }
+      .card h3 {
+        margin: 10px 0 5px 0;
+        font-size: 20px;
+        color: #023e8a;
+      }
+      .card p {
+        margin: 5px 0;
+        font-size: 16px;
+        color: #555;
+      }
+
+      footer {
+        text-align: center;
+        padding: 25px;
+        background: #333;
+        color: white;
+        margin-top: 40px;
+      }
+
+      @media (max-width: 768px) {
+        .trip-grid,
+        .vehicles-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html" class="back-home">🏠 Back to Home</a>
+    <header><h1>Akshvi Travels – Srisailam Packages</h1></header>
+
+    <section class="description">
+      <p>
+        Discover the divine charm of <b>Srisailam</b>, one of India’s most
+        sacred Jyotirlinga destinations. Surrounded by the scenic Nallamala
+        hills, this holy town offers a blend of spiritual bliss and natural
+        beauty. Choose from our <b>1-Day</b> or <b>2-Day Packages</b> with
+        comfortable cabs, ensuring a memorable journey from Hyderabad to
+        Srisailam.
+      </p>
+    </section>
+
+    <!-- Trip Categories -->
+    <div class="trip-grid">
+      <!-- 1 Day Trip -->
+      <div class="trip-card">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFotGgHiC0Gu2i1FjVFlU2A5A_2CpsvYaZBoaVuCVObszs4rvruxew2XktlHbvKv72p_8&usqp=CAU"
+        />
+        <h3>1 Day Srisailam Tour Package</h3>
+        <ul>
+          <li>Mallikarjuna Swamy Temple</li>
+          <li>Bramarambika Devi Temple</li>
+          <li>Sakshi Ganapathi Temple</li>
+          <li>Paladhara, Panchadhara</li>
+          <li>Hatkeshwar Temple</li>
+          <li>Srisailam Dam</li>
+          <li>Paatala Ganga</li>
+          <li>Octopus View Point</li>
+        </ul>
+        <button class="call-btn" onclick="callNow()">Call Now</button>
+        <button class="book-btn" onclick="bookNow()">Book Now</button>
+      </div>
+
+      <!-- 2 Day Trip -->
+      <div class="trip-card">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUTDavcAI3atu4atHCYJ2uxv0Z1S-WHhmWNQ&s"
+          alt="2 Day Srisailam Trip"
+        />
+        <h3>2 Days Srisailam Tour Package</h3>
+        <ul>
+          <li>Mallikarjuna Swamy Temple</li>
+          <li>Bramarambika Devi Temple</li>
+          <li>Sakshi Ganapathi Temple</li>
+          <li>Paladhara, Panchadhara</li>
+          <li>Hatkeshwar Temple</li>
+          <li>Srisailam Dam</li>
+          <li>Paatala Ganga</li>
+          <li>Octopus View Point</li>
+          <li>Srisailam Tiger Reserve</li>
+          <li>Srisailam Ropeway</li>
+          <li>Srisailam Boating</li>
+          <li>Akha Mahadevi Temple</li>
+          <li>Chenchu Lakshmi Museum</li>
+        </ul>
+        <button class="call-btn" onclick="callNow()">Call Now</button>
+        <button class="book-btn" onclick="bookNow()">Book Now</button>
+      </div>
+    </div>
+
+    <!-- Inclusions & Exclusions — Card Grid (recommended) -->
+    <section class="akshvi-inc-exc">
+      <h2>Tour Package Inclusions & Exclusions</h2>
+
+      <div class="akshvi-inc-exc-grid">
+        <div class="akshvi-card">
+          <h3>Included</h3>
+          <ul>
+            <li>
+              <strong>Cab:</strong> Round trip Hyderabad – Srisailam – Hyderabad
+              (500 km limit)
+            </li>
+            <li>
+              <strong>Border Tax:</strong> Andhra border tax (approx ₹500–₹1000)
+            </li>
+            <li><strong>GST:</strong> GST @ 5%</li>
+            <li><strong>Toll Taxes:</strong> All toll gate charges included</li>
+            <li><strong>Parking:</strong> All parking charges included</li>
+            <li>
+              <strong>Driver Allowance:</strong> Driver allowance / batta
+              included
+            </li>
+            <li>
+              <strong>Pickup/Drop:</strong> From Hotel / Home / Airport /
+              Railway Station / Bus Terminal
+            </li>
+          </ul>
+        </div>
+
+        <div class="akshvi-card">
+          <h3>Not Included</h3>
+          <ul>
+            <li>
+              <strong>Entry Tickets:</strong> Entry fees at temples /
+              attractions
+            </li>
+            <li><strong>Accommodation:</strong> Lodging / hotel stays</li>
+            <li><strong>Food:</strong> Meals (breakfast / lunch / dinner)</li>
+            <li>
+              <strong>Multiple Pickups/Drops:</strong> Not included — single
+              pickup/drop only
+            </li>
+            <li>
+              <strong>Extra KMs:</strong> Extra kilometres beyond 500 km charged
+              separately
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="akshvi-note">
+        <strong>Please note:</strong> Package comes with a 500 km limit. Extra
+        kms charged from <strong>₹14 / km</strong> onwards. One day = 6:00 AM –
+        11:00 PM. Customers should take care of driver food.
+      </p>
+    </section>
+
+    <style>
+      /* Put this in your <head> (or merge with existing stylesheet) */
+      .akshvi-inc-exc {
+        max-width: 1100px;
+        margin: 36px auto;
+        padding: 18px;
+        text-align: center;
+      }
+      .akshvi-inc-exc h2 {
+        color: #023e8a;
+        margin-bottom: 18px;
+        font-size: 22px;
+      }
+      .akshvi-inc-exc-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+      .akshvi-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 18px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        text-align: left;
+      }
+      .akshvi-card h3 {
+        color: #0077b6;
+        margin: 0 0 10px;
+        font-size: 18px;
+      }
+      .akshvi-card ul {
+        margin: 0;
+        padding-left: 18px;
+        color: #444;
+        line-height: 1.6;
+      }
+      .akshvi-card li {
+        margin-bottom: 8px;
+        font-size: 15px;
+      }
+      .akshvi-note {
+        margin-top: 14px;
+        color: #333;
+        background: #f8fbfd;
+        padding: 12px 14px;
+        border-radius: 10px;
+        display: inline-block;
+        text-align: left;
+        max-width: 100%;
+      }
+
+      /* Mobile: stack cards and slightly bigger tap targets */
+      @media (max-width: 768px) {
+        .akshvi-inc-exc-grid {
+          grid-template-columns: 1fr;
+        }
+        .akshvi-card {
+          padding: 16px;
+        }
+        .akshvi-card li {
+          font-size: 16px;
+        }
+        .akshvi-note {
+          font-size: 14px;
+          padding: 12px;
+        }
+      }
+    </style>
+
+    <!-- Vehicles Section -->
+    <div class="vehicles-grid">
+      <div class="card">
+        <img
+          src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Dzire/11387/1755776445645/front-left-side-47.jpg"
+          alt="Dzire"
+        />
+        <h3>Sedan - Maruti Swift Dzire</h3>
+        <p>4 + 1 Seats | Diesel | Manual</p>
+      </div>
+      <div class="card">
+        <img
+          src="https://dealermall-media.cars24.com/prod/d2c/inventory/114310/DLR1000986/modify/17421942151742194211?w=120&format=auto"
+          alt="Etios"
+        />
+        <h3>Sedan - Toyota Etios</h3>
+        <p>4 + 1 Seats | Diesel | Manual</p>
+      </div>
+      <div class="card">
+        <img
+          src="https://5.imimg.com/data5/HX/OP/GLADMIN-13487668/maruti-ertiga-cat.png"
+          alt="Ertiga"
+        />
+        <h3>MUV - Maruti Ertiga</h3>
+        <p>6 + 1 Seats | Diesel | Manual</p>
+      </div>
+      <div class="card">
+        <img
+          src="https://imgd-ct.aeplcdn.com/370x208/cw/ec/14545/Toyota-Innova-Right-Front-Three-Quarter-72626.jpg?wm=0&q=80"
+          alt="Innova"
+        />
+        <h3>MUV - Toyota Innova</h3>
+        <p>7 + 1 Seats | Diesel | Manual</p>
+      </div>
+      <div class="card">
+        <img
+          src="https://img.autocarpro.in/autocarpro/IMG/797/25797/new-innova2.jpg?w=750&h=490&q=75&c=1"
+          alt="Innova Crysta"
+        />
+        <h3>MUV - Innova Crysta</h3>
+        <p>7 + 1 Seats | Diesel | Manual</p>
+      </div>
+      <div class="card">
+        <img
+          src="https://outstationcabbooking.co.in/wp-content/uploads/2025/03/tempo-traveller-hire-in-kolkata-14-Seater.jpeg"
+          alt="Tempo"
+        />
+        <h3>TEMPO - Tempo Traveller</h3>
+        <p>12 to 28 Seats | Diesel | Manual</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        📞 <a href="tel:+919346311942" style="color: white">+91 9346311942</a> |
+        ✉️
+        <a href="mailto:akshvitravelss@gmail.com" style="color: white"
+          >akshvitravelss@gmail.com</a
+        >
+      </p>
+      <p>© 2025 Akshvi Travels. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function callNow() {
+        window.location.href = "tel:+919346311942";
+      }
+      function bookNow() {
+        window.location.href = "index.html#booking";
+      }
+    </script>
+  </body>
+</html>

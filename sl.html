@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akshvi Travels - Long Trip Packages</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f9f9f9;
+        color: #333;
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .back-home {
+        display: inline-block;
+        margin: 20px 0;
+        padding: 10px 20px;
+        background: #0077b6;
+        color: white;
+        border-radius: 12px;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+      .back-home:hover {
+        background: #005f99;
+      }
+      header {
+        background: linear-gradient(135deg, #0077b6, #0096c7);
+        color: white;
+        padding: 40px 20px;
+        margin-bottom: 30px;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 36px;
+        letter-spacing: 1px;
+      }
+      .description {
+        max-width: 900px;
+        margin: 0 auto 40px auto;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #023e8a;
+        text-align: center;
+      }
+      .categories-grid {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin: 0 auto 30px;
+        max-width: 1100px;
+      }
+      .category-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        width: 32%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .category-card img {
+        width: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+        height: 200px;
+        margin-bottom: 15px;
+      }
+      .category-card h3 {
+        margin: 10px 0 5px 0;
+        font-size: 20px;
+        color: #023e8a;
+      }
+      .category-card p {
+        margin: 5px 0;
+        font-size: 16px;
+        color: #555;
+        text-align: left;
+      }
+      .category-card .btns {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .category-card button {
+        padding: 12px 20px;
+        border-radius: 10px;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        flex: 1;
+      }
+      .call-btn {
+        background: #dabb5f;
+        color: white;
+      }
+      .call-btn:hover {
+        background: #de6a4d;
+      }
+      .book-btn {
+        background: #51b59c;
+        color: white;
+      }
+      .book-btn:hover {
+        background: #007f6b;
+      }
+      .custom-note {
+        max-width: 900px;
+        margin: 20px auto;
+        font-size: 16px;
+        color: #0077b6;
+        text-align: center;
+      }
+      .inc-exc {
+        max-width: 900px;
+        margin: 30px auto;
+        border-collapse: collapse;
+        width: 95%;
+      }
+      .inc-exc th,
+      .inc-exc td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+        font-size: 15px;
+      }
+      .inc-exc th {
+        background-color: #0077b6;
+        color: white;
+      }
+      .inc-exc td {
+        background-color: #f9f9f9;
+      }
+      .vehicles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        max-width: 1100px;
+        margin: 40px auto;
+      }
+      .card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+      }
+      .card img {
+        width: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+        height: 180px;
+        margin-bottom: 15px;
+      }
+      .card h3 {
+        margin: 10px 0 5px 0;
+        font-size: 20px;
+        color: #023e8a;
+      }
+      .card p {
+        margin: 5px 0;
+        font-size: 16px;
+        color: #555;
+      }
+      footer {
+        text-align: center;
+        padding: 25px;
+        background: #333;
+        color: white;
+        margin-top: 40px;
+      }
+      @media (max-width: 1024px) {
+        .category-card {
+          width: 48%;
+        }
+      }
+      @media (max-width: 768px) {
+        .categories-grid,
+        .vehicles-grid {
+          flex-direction: column;
+          align-items: center;
+        }
+        .category-card,
+        .card {
+          width: 90%;
+        }
+        .category-card p {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html" class="back-home">🏠 Back to Home</a>
+    <header><h1>Akshvi Travels</h1></header>
+
+    <section class="description">
+      <p>
+        Explore South India with our specially curated long trip packages. Each
+        trip covers the most popular destinations along with many more hidden
+        gems. All trips are fully customizable, and a detailed planned itinerary
+        is provided according to the number of days. To know more, call us at
+        <strong>9346311942</strong>.
+      </p>
+    </section>
+
+    <!-- Categories -->
+    <div class="categories-grid">
+      <!-- Tirupati -->
+      <div class="category-card">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPmNGzv4GJNjzlqYPRvriE0YJ2Ve9yGgIqSQ&s"
+          alt="Tirupati Trip"
+        />
+        <h3>1️⃣ Tirupati Trip</h3>
+        <p>
+          Visit Tirupati Balaji Temple, Sri Kalahasti Temple, Kapila Theertham,
+          Chandragiri Fort, Talakona Waterfalls, and local markets. Many more
+          places can be included. Fully customizable with planned itinerary.
+        </p>
+        <div class="btns">
+          <button class="call-btn" onclick="callNow()">Call Now</button>
+          <button class="book-btn" onclick="bookNow()">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Arunachala -->
+      <div class="category-card">
+        <img
+          src="https://www.dreamandtravel.com/wp-content/uploads/2025/07/Arunachalam-Temple-scaled.jpg"
+          alt="Arunachala Trip"
+        />
+        <h3>2️⃣ Arunachala Trip</h3>
+        <p>
+          Explore Arunachaleswarar Temple, Ramana Ashram, Annamalaiyar Hill,
+          Skanda Ashram, Girivalam Walk, and local markets. Many more places can
+          be included. Fully customizable with planned itinerary.
+        </p>
+        <div class="btns">
+          <button class="call-btn" onclick="callNow()">Call Now</button>
+          <button class="book-btn" onclick="bookNow()">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Yadagirigutta -->
+      <div class="category-card">
+        <img
+          src="https://assets.thehansindia.com/h-upload/2022/04/30/1289723-yadagirigutta.jpg"
+          alt="Yadagirigutta Trip"
+        />
+        <h3>3️⃣ Yadagirigutta Trip</h3>
+        <p>
+          Visit Yadagirigutta Lakshmi Narasimha Temple, Keesaragutta Temple,
+          scenic hills, lake, and local crafts. Many more destinations can be
+          added. Fully customizable with planned itinerary.
+        </p>
+        <div class="btns">
+          <button class="call-btn" onclick="callNow()">Call Now</button>
+          <button class="book-btn" onclick="bookNow()">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Kerala -->
+      <div class="category-card">
+        <img
+          src="https://www.thehosteller.com/_next/image/?url=https%3A%2F%2Fstatic.thehosteller.com%2Fhostel%2Fimages%2Fimage.jpg%2Fimage-1742556759704.jpg&w=2048&q=75"
+          alt="Kerala Trip"
+        />
+        <h3>4️⃣ Kerala Trip</h3>
+        <p>
+          Covers Munnar Tea Gardens, Mattupetty Dam, Eravikulam National Park,
+          Alleppey Backwaters, Kumarakom Bird Sanctuary, Fort Kochi, and
+          Athirappilly Waterfalls. Many more places included. Fully customizable
+          with planned itinerary.
+        </p>
+        <div class="btns">
+          <button class="call-btn" onclick="callNow()">Call Now</button>
+          <button class="book-btn" onclick="bookNow()">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Karnataka -->
+      <div class="category-card">
+        <img
+          src="https://d3sftlgbtusmnv.cloudfront.net/blog/wp-content/uploads/2024/10/Murdeshwar-Cover-Photo--840x425.jpg"
+          alt="Karnataka Trip"
+        />
+        <h3>5️⃣ Karnataka Trip</h3>
+        <p>
+          Explore Hampi UNESCO Site, Badami Caves, Pattadakal & Aihole Temples,
+          Mysore Palace, Chamundi Hill, and Brindavan Gardens. Many more places
+          included. Fully customizable with planned itinerary.
+        </p>
+        <div class="btns">
+          <button class="call-btn" onclick="callNow()">Call Now</button>
+          <button class="book-btn" onclick="bookNow()">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Tamil Nadu -->
+      <div class="category-card">
+        <img
+          src="https://cdn.kimkim.com/files/a/content_articles/featured_photos/6993d173d4b49caed93819ef9e4a366631c6b249/big-b71140ad5f5648cff4aaff46447c003f.jpg"
+          alt="Tamil Nadu Trip"
+        />
+        <h3>6️⃣ Tamil Nadu Trip</h3>
+        <p>
+          Covers Madurai Meenakshi Temple, Rameshwaram Temple, Kanyakumari,
+          Thanjavur Brihadeeswarar Temple, Chidambaram Nataraja Temple, and
+          Pondicherry Promenade. Many more destinations included. Fully
+          customizable with planned itinerary.
+        </p>
+        <div class="btns">
+          <button class="call-btn" onclick="callNow()">Call Now</button>
+          <button class="book-btn" onclick="bookNow()">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <p class="custom-note">
+      <b>Note:</b> All trips can be fully customized according to your
+      preferences and schedule. Planned itinerary is provided for all days.
+    </p>
+
+    <!-- Inclusions/Exclusions Table -->
+    <table class="inc-exc">
+      <tr>
+        <th>Included</th>
+        <th>Not Included</th>
+      </tr>
+      <tr>
+        <td>Cab for round trip from pick up - all places</td>
+        <td>Entry Fees for attractions</td>
+      </tr>
+      <tr>
+        <td>All parking charges included</td>
+        <td>Lodging / Accommodation</td>
+      </tr>
+      <tr>
+        <td>Driver Allowance / Batta included</td>
+        <td>Meals</td>
+      </tr>
+      <tr>
+        <td>
+          Pickup & Drop from your Hotel / Home / Airport / Railway Station / Bus
+          Terminal / or Elsewhere
+        </td>
+        <td>Multiple pickups/drops not included</td>
+      </tr>
+      <tr>
+        <td colspan="2">Please Note: Customer to arrange driver food.</td>
+      </tr>
+    </table>
+
+    <!-- Vehicles Section -->
+    <div class="vehicles-grid">
+      <div class="card">
+        <img
+          src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Dzire/11387/1755776445645/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+          alt="Maruti Swift Dzire"
+        />
+        <h3>Sedan - Maruti Swift Dzire</h3>
+        <p>4 + 1 Seats | Diesel | Manual</p>
+      </div>
+      <div class="card">
+        <img
+          src="https://dealermall-media.cars24.com/prod/d2c/inventory/114310/DLR1000986/modify/17421942151742194211?w=120&format=auto"
+          alt="Toyota Etios"
+        />
+        <h3>Sedan - Toyota Etios</h3>
+        <p>4 + 1 Seats | Diesel | Manual</p>
+      </div>
+      <div class="card">
+        <img
+          src="https://5.imimg.com/data5/HX/OP/GLADMIN-13487668/maruti-ertiga-cat.png"
+          alt="Maruti Ertiga"
+        />
+        <h3>MUV - Maruti Ertiga</h3>
+        <p>6 + 1 Seats | Diesel | Manual</p>
+      </div>
+      <div class="card">
+        <img
+          src="https://imgd-ct.aeplcdn.com/370x208/cw/ec/14545/Toyota-Innova-Right-Front-Three-Quarter-72626.jpg?wm=0&q=80"
+          alt="Toyota Innova"
+        />
+        <h3>MUV - Toyota Innova</h3>
+        <p>7 + 1 Seats | Diesel | Manual</p>
+      </div>
+      <div class="card">
+        <img
+          src="https://img.autocarpro.in/autocarpro/IMG/797/25797/new-innova2.jpg?w=750&h=490&q=75&c=1"
+          alt="Innova Crysta"
+        />
+        <h3>MUV - Innova Crysta</h3>
+        <p>7 + 1 Seats | Diesel | Manual</p>
+      </div>
+      <div class="card">
+        <img
+          src="https://outstationcabbooking.co.in/wp-content/uploads/2025/03/tempo-traveller-hire-in-kolkata-14-Seater.jpeg"
+          alt="Tempo Traveller"
+        />
+        <h3>TEMPO - Tempo Traveller</h3>
+        <p>12 to 28 Seats | Diesel | Manual</p>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        📞 <a href="tel:+919346311942" style="color: white">+91 9346311942</a> |
+        ✉️
+        <a href="mailto:akshvitravelss@gmail.com" style="color: white"
+          >akshvitravelss@gmail.com</a
+        >
+      </p>
+      <p>© 2025 Akshvi Travels. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function callNow() {
+        window.location.href = "tel:+919346311942";
+      }
+      function bookNow() {
+        window.location.href = "index.html#booking";
+      }
+    </script>
+  </body>
+</html>

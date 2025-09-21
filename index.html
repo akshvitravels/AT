@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akshvi Travels</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Global Styles */
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f9f9f9;
+        color: #333;
+      }
+      a {
+        text-decoration: none;
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+      .card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .gallery img {
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+        height: 180px;
+      }
+
+      /* Header */
+      header {
+        background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80")
+          center/cover no-repeat;
+        color: white;
+        text-align: center;
+        padding: 120px 20px;
+        position: relative;
+      }
+      header::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+      }
+      header h1,
+      header p,
+      header .btn-group {
+        position: relative;
+        z-index: 1;
+      }
+      header h1 {
+        font-size: 48px;
+        margin: 0;
+      }
+      header p {
+        font-size: 22px;
+        margin-top: 10px;
+      }
+      .btn-group a {
+        padding: 15px 25px;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.3s;
+        color: white;
+      }
+      .btn-call {
+        background: #dabb5f;
+      }
+      .btn-call:hover {
+        background: #de6a4d;
+      }
+      .btn-book {
+        background: #51b59c;
+      }
+      .btn-book:hover {
+        background: #0056b3;
+      }
+
+      /* Sections */
+      section {
+        padding: 60px 20px;
+        max-width: 1100px;
+        margin: auto;
+      }
+      #about {
+        background: #fdf6f0;
+      }
+
+      /* Trip Categories */
+      #categories .categories-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+      }
+      #categories .card {
+        min-height: 380px;
+      }
+      #categories .card h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+      #categories .card p {
+        flex-grow: 1;
+      }
+      #categories .card a {
+        text-align: center;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background: #0077b6;
+        color: white;
+        border-radius: 8px;
+        font-weight: 600;
+        display: inline-block;
+        transition: 0.3s;
+      }
+      #categories .card a:hover {
+        background: #005f99;
+      }
+
+      /* Vehicles */
+      #vehicles .vehicles-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      #vehicles .card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+      #vehicles .card h3 {
+        margin: 10px 0 5px 0;
+        font-size: 18px;
+        text-align: center;
+      }
+      #vehicles .card p {
+        margin: 0;
+        text-align: center;
+        font-size: 14px;
+        color: #555;
+      }
+
+      /* Reviews Grid */
+      .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+      }
+      #reviews .card {
+        min-height: 180px;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        background: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      /* Booking Form */
+      #booking {
+        padding: 80px 20px;
+        background: #f0f4f8;
+      }
+      #booking h2 {
+        font-size: 36px;
+        margin-bottom: 50px;
+        color: #333;
+        font-weight: 700;
+      }
+      #booking form {
+        max-width: 750px;
+        margin: auto;
+        background: #fff;
+        padding: 30px 25px;
+        border-radius: 20px;
+        border: 4px solid #0077b6;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      #booking input,
+      #booking select,
+      #booking textarea {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+        border-radius: 12px;
+        border: 2px solid #0096c7;
+        box-sizing: border-box;
+      }
+      #booking textarea {
+        grid-column: 1 / -1;
+        min-height: 120px;
+        resize: vertical;
+      }
+      #booking button {
+        grid-column: 1 / -1;
+        padding: 16px 40px;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #0077b6, #0096c7);
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      #booking button:hover {
+        background: linear-gradient(135deg, #0096c7, #0077b6);
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #333;
+        color: white;
+        margin-top: 40px;
+      }
+
+      /* Responsive */
+      @media (max-width: 1024px) {
+        #vehicles .vehicles-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 700px) {
+        #booking form {
+          grid-template-columns: 1fr !important;
+        }
+        #vehicles .vehicles-grid {
+          grid-template-columns: 1fr;
+        }
+        #categories .categories-grid {
+          grid-template-columns: 1fr;
+        }
+        header h1 {
+          font-size: 36px;
+        }
+        header p {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav
+      style="
+        background: #333;
+        color: white;
+        padding: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <span style="font-size: 20px; font-weight: bold">Akshvi Travels</span>
+        <span id="menu-btn" style="font-size: 26px; cursor: pointer">☰</span>
+      </div>
+      <div
+        id="menu-links"
+        style="display: none; flex-direction: column; margin-top: 10px"
+      >
+        <a href="#home" style="color: white; margin: 5px 0">Home</a>
+        <a href="#about" style="color: white; margin: 5px 0">About Us</a>
+        <a href="#categories" style="color: white; margin: 5px 0">Categories</a>
+        <a href="#vehicles" style="color: white; margin: 5px 0">Vehicles</a>
+        <a href="#reviews" style="color: white; margin: 5px 0">Reviews</a>
+        <a href="#booking" style="color: white; margin: 5px 0">Book Now</a>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="home">
+      <h1>Akshvi Travels</h1>
+      <p>Explore India with Comfort & Care</p>
+      <div class="btn-group">
+        <a href="tel:+919346311942" class="btn-call" id="callBtn"
+          >📞 Call Us Now</a
+        >
+        <a href="#booking" class="btn-book">📝 Book Online</a>
+      </div>
+    </header>
+
+    <!-- About Us -->
+    <section id="about">
+      <h2>About Us</h2>
+      <div class="card">
+        <p>
+          <b>Akshvi Travels</b> was born from a dream — a dream that travel
+          should not just be about reaching a destination, but about
+          <b
+            >living a story, feeling the journey, and carrying memories in your
+            heart forever</b
+          >.
+        </p>
+        <p>
+          We believe that <b>every person deserves the joy of travel</b>. To
+          watch the sunrise over new horizons, to laugh with friends on a road
+          trip, to find peace in the quiet of a temple, and to collect moments
+          that no camera can truly capture — only your heart can.
+        </p>
+        <p
+          style="
+            font-style: italic;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #444;
+          "
+        >
+          ❤️ “Journeys end, but the memories live forever — let us create them
+          with you.” ❤️
+        </p>
+      </div>
+    </section>
+
+    <!-- Trip Categories -->
+    <section id="categories">
+      <h2>Our Trip Categories</h2>
+      <div class="categories-grid">
+        <div class="card">
+          <h3>Hourly Cabs</h3>
+          <p>
+            Akshvi Travels covers all your hourly travel requirements, whether
+            it's short city rides or multiple stops across town — comfort and
+            convenience guaranteed.
+          </p>
+          <div class="gallery">
+            <img
+              src="https://www.sahotataxiservice.com/theme/images/about.jpg"
+              alt="Hourly Cab"
+            />
+          </div>
+          <a href="hc.html">Explore More</a>
+        </div>
+        <div class="card">
+          <h3>Airport Cabs</h3>
+          <p>
+            Reliable pick-up and drop services to/from airports. Punctual,
+            comfortable, and hassle-free transfers for a stress-free journey.
+          </p>
+          <div class="gallery">
+            <img
+              src="https://www.chiangmaiairporttransfer.com/wp-content/uploads/2019/10/Chiang-Mai-Airport-Taxi.jpg"
+              alt="Airport Cab"
+            />
+          </div>
+          <a href="ac.html">Explore More</a>
+        </div>
+        <div class="card">
+          <h3>Srisailam Cabs</h3>
+          <p>
+            Comfortable and reliable cabs for Srisailam trips. Whether it’s a
+            solo pilgrimage or family visit, we ensure a safe and smooth
+            journey.
+          </p>
+          <div class="gallery">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG92Q2joPBx17T7u8HfqSlv7nPsIhQFHkCKA&s"
+              alt="Srisailam Cab"
+            />
+          </div>
+          <a href="sc.html">Explore More</a>
+        </div>
+        <div class="card">
+          <h3>City Travels</h3>
+          <p>
+            Navigate the city effortlessly with Akshvi Travels. Perfect for
+            daily commutes, city sightseeing, or casual trips around town.
+          </p>
+          <div class="gallery">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Charminar-Pride_of_Hyderabad.jpg/500px-Charminar-Pride_of_Hyderabad.jpg"
+              alt="City Travel"
+            />
+          </div>
+          <a href="ct.html">Explore More</a>
+        </div>
+        <div class="card">
+          <h3>Short / Long Trips</h3>
+          <p>
+            Customised itineraries for both short and long journeys. Explore new
+            destinations comfortably and safely, tailored to your preferences.
+          </p>
+          <div class="gallery">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST0udGU-h2jdMbdpHi2lTbCs7HOMLD1E0JWg&s"
+              alt="Short/Long Trip"
+            />
+          </div>
+          <a href="sl.html">Explore More</a>
+        </div>
+        <div class="card">
+          <h3>Budget-Friendly Trips</h3>
+          <p>
+            Affordable travel options for groups, families, or solo travelers.
+            Enjoy memorable journeys without breaking the bank.
+          </p>
+          <div class="gallery">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoJnWh-bhaXYqzD_Cl5GGR5FurLA1mnWvNHg&s"
+              alt="Budget Trip"
+            />
+          </div>
+          <a href="bt.html">Explore More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vehicles -->
+    <section id="vehicles">
+      <h2>🚘 Our Vehicles</h2>
+      <div class="vehicles-grid">
+        <div class="card">
+          <img
+            src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Dzire/11387/1755776445645/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+            alt="Sedan"
+          />
+          <h3>Sedan</h3>
+          <p>4 Seater | Daily & Business trips</p>
+        </div>
+        <div class="card">
+          <img
+            src="https://imgd-ct.aeplcdn.com/370x208/cw/ec/14545/Toyota-Innova-Right-Front-Three-Quarter-72626.jpg?wm=0&q=80"
+            alt="Innova"
+          />
+          <h3>Innova</h3>
+          <p>7 Seater | Family trips</p>
+        </div>
+        <div class="card">
+          <img
+            src="https://img.autocarpro.in/autocarpro/IMG/797/25797/new-innova2.jpg?w=750&h=490&q=75&c=1"
+            alt="Innova Crysta"
+          />
+          <h3>Innova Crysta</h3>
+          <p>7 Seater | Premium comfort</p>
+        </div>
+        <div class="card">
+          <img
+            src="https://outstationcabbooking.co.in/wp-content/uploads/2025/03/tempo-traveller-hire-in-kolkata-14-Seater.jpeg"
+            alt="Tempo Traveller"
+          />
+          <h3>Tempo Traveller</h3>
+          <p>12/17 Seater | Perfect for groups</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews">
+      <h2>⭐ Customer Reviews</h2>
+      <div class="reviews-grid">
+        <div class="card">
+          <p>
+            "Had an amazing trip to Srisailam. Very professional driver and
+            clean vehicle. Highly recommend!"
+          </p>
+          <p><b>- Ramesh K.</b></p>
+        </div>
+        <div class="card">
+          <p>
+            "The Innova was very comfortable, driver was polite and on time.
+            Will book again!"
+          </p>
+          <p><b>- Sneha P.</b></p>
+        </div>
+        <div class="card">
+          <p>
+            "We went on a Kerala long trip, everything was well arranged.
+            Excellent service."
+          </p>
+          <p><b>- Anvesh S.</b></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking">
+      <h2>📅 Book Your Trip</h2>
+      <div
+        style="
+          max-width: 750px;
+          margin: auto;
+          background: #ffffff;
+          padding: 30px 25px;
+          border-radius: 20px;
+          border: 4px solid #0077b6;
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        "
+      >
+        <form id="bookingForm">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="name" placeholder="👤 Your Name" required />
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="📞 Phone Number"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Pickup Location</label>
+            <input
+              type="text"
+              id="pickup"
+              placeholder="📍 Pickup Place"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Drop Location</label>
+            <input type="text" id="drop" placeholder="🏁 Drop Place" required />
+          </div>
+          <div class="form-group">
+            <label>Travel Date</label>
+            <input type="date" id="date" required />
+          </div>
+          <div class="form-group">
+            <label>Travel Time</label>
+            <input type="time" id="time" required />
+          </div>
+          <div class="form-group">
+            <label>Number of Passengers</label>
+            <input
+              type="number"
+              id="passengers"
+              min="1"
+              placeholder="e.g. 4"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Vehicle Type</label>
+            <select id="vehicle" required>
+              <option value="">-- Select Vehicle --</option>
+              <option>Sedan (4 Seater)</option>
+              <option>Innova (7 Seater)</option>
+              <option>Innova Crysta (7 Seater)</option>
+              <option>Tempo Traveller (12/17 Seater)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Trip Category</label>
+            <select id="category" required>
+              <option value="">Select Category</option>
+              <option>Hourly Cabs</option>
+              <option>Airport Cabs</option>
+              <option>Srisailam Cabs</option>
+              <option>City Travels</option>
+              <option>Short/Long Trips</option>
+              <option>Budget-Friendly Trips</option>
+            </select>
+          </div>
+          <div class="form-group" style="grid-column: 1 / -1">
+            <label>Additional Notes</label>
+            <textarea
+              id="notes"
+              placeholder="📝 Any additional info?"
+            ></textarea>
+          </div>
+          <div
+            style="grid-column: 1 / -1; text-align: center; margin-top: 25px"
+          >
+            <button type="button" onclick="sendToWhatsApp()">
+              🚀 Book Now
+            </button>
+          </div>
+        </form>
+      </div>
+      <div
+        style="
+          text-align: center;
+          margin-top: 10px;
+          font-size: 16px;
+          color: #0077b6;
+        "
+      >
+        ✨ Let us help you plan a memorable and hassle-free journey tailored
+        just for you! For more details and travel costs, please call us.
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        📞 <a href="tel:+919346311942" style="color: white">+91 9346311942</a> |
+        ✉️
+        <a href="mailto:akshvitravelss@gmail.com" style="color: white"
+          >akshvitravelss@gmail.com</a
+        >
+        |
+      </p>
+      <p>© 2025 Akshvi Travels. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Menu toggle
+      document
+        .getElementById("menu-btn")
+        .addEventListener("click", function () {
+          let links = document.getElementById("menu-links");
+          links.style.display =
+            links.style.display === "flex" ? "none" : "flex";
+        });
+
+      // Call button alert for desktop
+      const callBtn = document.getElementById("callBtn");
+      callBtn.addEventListener("click", function (e) {
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        if (!isMobile) {
+          e.preventDefault();
+          alert("Please dial this number from your phone: +91 9346311942");
+        }
+      });
+
+      // WhatsApp booking
+      function sendToWhatsApp() {
+        const name = document.getElementById("name").value;
+        const phone = document.getElementById("phone").value;
+        const pickup = document.getElementById("pickup").value;
+        const drop = document.getElementById("drop").value;
+        const date = document.getElementById("date").value;
+        const time = document.getElementById("time").value;
+        const passengers = document.getElementById("passengers").value;
+        const vehicle = document.getElementById("vehicle").value;
+        const category = document.getElementById("category").value;
+        const notes = document.getElementById("notes").value || "N/A";
+
+        const message = `Hello Akshvi Travels,%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Pickup: ${pickup}%0A
+Drop: ${drop}%0A
+Date: ${date}%0A
+Time: ${time}%0A
+Passengers: ${passengers}%0A
+Vehicle: ${vehicle}%0A
+Category: ${category}%0A
+Notes: ${notes}`;
+
+        const whatsappNumber = "919346311942";
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+        window.open(whatsappURL, "_blank");
+      }
+    </script>
+  </body>
+</html>

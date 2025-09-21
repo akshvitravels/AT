@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akshvi Travels - Budget Friendly Trip</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f9f9f9;
+        color: #333;
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .back-home {
+        display: inline-block;
+        margin: 20px 0;
+        padding: 10px 20px;
+        background: #0077b6;
+        color: white;
+        border-radius: 12px;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+      .back-home:hover {
+        background: #005f99;
+      }
+      header {
+        background: linear-gradient(135deg, #0077b6, #0096c7);
+        color: white;
+        padding: 40px 20px;
+        margin-bottom: 20px;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 36px;
+        letter-spacing: 1px;
+      }
+      header h2 {
+        margin: 15px 0 0 0;
+        font-size: 28px;
+        font-weight: 600;
+        color: #f9f9f9;
+      }
+      .description {
+        max-width: 900px;
+        margin: 0 auto 30px auto;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #023e8a;
+        text-align: center;
+      }
+      .note {
+        max-width: 900px;
+        margin: 20px auto 40px auto;
+        font-size: 16px;
+        color: #0077b6;
+        text-align: center;
+      }
+      .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+      }
+      .buttons button {
+        padding: 15px 25px;
+        border-radius: 10px;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 16px;
+      }
+      .call-btn {
+        background: #dabb5f;
+        color: white;
+      }
+      .call-btn:hover {
+        background: #de6a4d;
+      }
+      .book-btn {
+        background: #51b59c;
+        color: white;
+      }
+      .book-btn:hover {
+        background: #007f6b;
+      }
+      footer {
+        text-align: center;
+        padding: 25px;
+        background: #333;
+        color: white;
+        margin-top: 40px;
+      }
+      @media (max-width: 768px) {
+        .buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+        .buttons button {
+          width: 80%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html" class="back-home">🏠 Back to Home</a>
+    <header>
+      <h1>Akshvi Travels</h1>
+      <h2>Budget Friendly Trip</h2>
+    </header>
+
+    <section class="description">
+      <p>
+        Our Budget Friendly Trip is designed exclusively for travelers looking
+        to explore amazing destinations without breaking the bank! The goal is
+        to make travel easy, affordable, and enjoyable, helping people connect
+        and create unforgettable memories. Every journey is planned per head and
+        can be fully customized to your preferences. Many more beautiful places
+        and experiences await you.
+      </p>
+    </section>
+
+    <div class="buttons">
+      <button class="call-btn" onclick="callNow()">Call Now</button>
+      <button class="book-btn" onclick="bookNow()">Book Now</button>
+    </div>
+
+    <p class="note">
+      Call us to make your dream trip customized. Let's make your journey more
+      beautiful, comfortable, and memorable!
+    </p>
+
+    <footer>
+      <p>
+        📞 <a href="tel:+919346311942" style="color: white">+91 9346311942</a> |
+        ✉️
+        <a href="mailto:akshvitravelss@gmail.com" style="color: white"
+          >akshvitravelss@gmail.com</a
+        >
+      </p>
+      <p>© 2025 Akshvi Travels. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function callNow() {
+        window.location.href = "tel:+919346311942";
+      }
+      function bookNow() {
+        window.location.href = "index.html#booking";
+      }
+    </script>
+  </body>
+</html>

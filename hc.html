@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akshvi Travels - Hourly Cabs</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f9f9f9;
+        color: #333;
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+      }
+      .back-home {
+        display: inline-block;
+        margin: 20px 0;
+        padding: 10px 20px;
+        background: #0077b6;
+        color: white;
+        border-radius: 12px;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+      .back-home:hover {
+        background: #005f99;
+      }
+
+      header {
+        background: linear-gradient(135deg, #0077b6, #0096c7);
+        color: white;
+        padding: 40px 20px;
+        margin-bottom: 30px;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 36px;
+        letter-spacing: 1px;
+      }
+
+      .description {
+        max-width: 900px;
+        margin: 0 auto 50px auto;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #023e8a;
+        text-align: center;
+      }
+
+      .vehicles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        max-width: 1100px;
+        margin: auto;
+      }
+      .card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .card img {
+        width: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+        height: 180px;
+        margin-bottom: 15px;
+      }
+      .card h3 {
+        margin: 10px 0 5px 0;
+        font-size: 20px;
+        color: #023e8a;
+      }
+      .card p {
+        margin: 5px 0;
+        font-size: 16px;
+        color: #555;
+      }
+      .card button {
+        margin-top: 15px; /* same as airport cabs page */
+        padding: 12px 25px; /* match airport cabs button width */
+        border-radius: 10px;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .call-btn {
+        background: #dabb5f;
+        color: white;
+      }
+      .call-btn:hover {
+        background: #de6a4d;
+      }
+      .book-btn {
+        background: #51b59c;
+        color: white;
+      }
+      .book-btn:hover {
+        background: #007f6b;
+      }
+
+      footer {
+        text-align: center;
+        padding: 25px;
+        background: #333;
+        color: white;
+        margin-top: 40px;
+      }
+
+      @media (max-width: 768px) {
+        .vehicles-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html" class="back-home">🏠 Back to Home</a>
+    <header><h1>Akshvi Travels</h1></header>
+
+    <section class="description">
+      <p>
+        <b>Hourly Booking Plans</b> – Choose from a wide range of
+        well-maintained and comfortable vehicles, perfectly suited for every
+        occasion, whether it’s business trips, family outings, or special
+        events.
+      </p>
+      <p>
+        Packages: <b>8 Hours | 80 Kms</b> & <b>12 Hours | 120 Kms</b> |
+        Vehicles: 4 to 28 Seater | Tolls & Parking Extra | Extra Km & Hours
+        Charges Apply
+      </p>
+    </section>
+
+    <div class="vehicles-grid">
+      <div class="card">
+        <img
+          src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Dzire/11387/1755776445645/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+          alt="Maruti Swift Dzire"
+        />
+        <h3>Sedan - Maruti Swift Dzire</h3>
+        <p>4 + 1 Seats | Diesel | Manual</p>
+        <button class="call-btn" onclick="callNow()">Call Now</button>
+        <button class="book-btn" onclick="bookNow()">Book Now</button>
+      </div>
+      <div class="card">
+        <img
+          src="https://dealermall-media.cars24.com/prod/d2c/inventory/114310/DLR1000986/modify/17421942151742194211?w=120&format=auto"
+          alt="Toyota Etios"
+        />
+        <h3>Sedan - Toyota Etios</h3>
+        <p>4 + 1 Seats | Diesel | Manual</p>
+        <button class="call-btn" onclick="callNow()">Call Now</button>
+        <button class="book-btn" onclick="bookNow()">Book Now</button>
+      </div>
+      <div class="card">
+        <img
+          src="https://5.imimg.com/data5/HX/OP/GLADMIN-13487668/maruti-ertiga-cat.png"
+          alt="Maruti Ertiga"
+        />
+        <h3>MUV - Maruti Ertiga</h3>
+        <p>6 + 1 Seats | Diesel | Manual</p>
+        <button class="call-btn" onclick="callNow()">Call Now</button>
+        <button class="book-btn" onclick="bookNow()">Book Now</button>
+      </div>
+      <div class="card">
+        <img
+          src="https://imgd-ct.aeplcdn.com/370x208/cw/ec/14545/Toyota-Innova-Right-Front-Three-Quarter-72626.jpg?wm=0&q=80"
+          alt="Toyota Innova"
+        />
+        <h3>MUV - Toyota Innova</h3>
+        <p>7 + 1 Seats | Diesel | Manual</p>
+        <button class="call-btn" onclick="callNow()">Call Now</button>
+        <button class="book-btn" onclick="bookNow()">Book Now</button>
+      </div>
+      <div class="card">
+        <img
+          src="https://img.autocarpro.in/autocarpro/IMG/797/25797/new-innova2.jpg?w=750&h=490&q=75&c=1"
+          alt="Innova Crysta"
+        />
+        <h3>MUV - Innova Crysta</h3>
+        <p>7 + 1 Seats | Diesel | Manual</p>
+        <button class="call-btn" onclick="callNow()">Call Now</button>
+        <button class="book-btn" onclick="bookNow()">Book Now</button>
+      </div>
+      <div class="card">
+        <img
+          src="https://outstationcabbooking.co.in/wp-content/uploads/2025/03/tempo-traveller-hire-in-kolkata-14-Seater.jpeg"
+          alt="Tempo Traveller"
+        />
+        <h3>TEMPO - Tempo Traveller</h3>
+        <p>12 to 28 Seats | Diesel | Manual</p>
+        <button class="call-btn" onclick="callNow()">Call Now</button>
+        <button class="book-btn" onclick="bookNow()">Book Now</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        📞 <a href="tel:+919346311942" style="color: white">+91 9346311942</a> |
+        ✉️
+        <a href="mailto:akshvitravelss@gmail.com" style="color: white"
+          >akshvitravelss@gmail.com</a
+        >
+      </p>
+      <p>© 2025 Akshvi Travels. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function callNow() {
+        window.location.href = "tel:+919346311942";
+      }
+      function bookNow() {
+        window.location.href = "index.html#booking";
+      }
+    </script>
+  </body>
+</html>
